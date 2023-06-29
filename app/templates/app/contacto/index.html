@@ -1,0 +1,144 @@
+{% load static %}
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AcerCord-Contacto</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+
+    <script src="https://kit.fontawesome.com/72133ec4d8.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/a608bc6fd0.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="{% static 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'index/css/Style.css'%}">
+
+    
+
+</head>
+
+<body style="background-color: #E5E5E5;">
+  <nav>
+    <div class="topnav fixed-top" id="myTopnav">
+      <a href="{% url 'home' %}" class="active" ><i class="fa fa-fw fa-home"></i>Inicio</a>
+      {% if user.is_authenticated %}
+      <a href="{% url 'home'%}"><i class="fa fa-fw fa-user"></i>{{ user.username}}</a>
+      {% else %}
+      <a href="{% url 'login'%}"><i class="fa fa-fw fa-user"></i>Iniciar sesion</a>
+      {% endif %}
+
+      <a href="{% url 'listar_producto'%}" id="NavBar"><i class="fa-regular  fa-rectangle-list fa-sm"></i> Productos</a>
+
+      {% if perms.app.add_producto %} 
+      <a href="{% url 'agregar_producto'%}"><i class="fa fa-fw fa-user"></i>Agregar Productos</a>
+      {% endif %}
+      <a href="{% url 'contacto'%}"><i class="fa fa-fw fa-envelope"></i> Contacto</a>
+      {% if user.is_authenticated %}
+      <a href="{% url 'logout'%}"><i class=""></i>Cerrar sesion</a>
+      {% endif %}
+
+      
+
+      <!--<a href="#"><i id="CarritoCompra" class="fa-solid fa-cart-shopping"></i> Carrito</a>     Aun por terminar  -->
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+      </a>
+    </div>
+  </nav>
+
+    <section style="margin-top: 100px;">
+
+        <div class="container">
+            <form role="form" id="Formulario" method="POST" style="margin: 20px 20px 20px 20px; ">
+
+                    {% csrf_token%}
+                    {{form}}
+                        <br>  
+                        
+                        <div class="d-flex justify-content-end" style="margin: 20px 450px;">
+                            
+                        <input style="background-color: green;" type="submit" class="btn btn-primary" value="Enviar">
+                        <div style="margin-left: 70px;">
+                        <input style="background-color: antiquewhite" type="reset" class="btn btn-default" value="Limpiar">      
+                            </div>
+                        </div>
+        
+                
+                <div id="respuesta" style="display: none;"></div>
+            </form>
+            {{mensaje}}
+
+
+
+
+          </div>    
+        </div>      
+
+  </section>
+    
+<!-- footer -->
+<footer class="footer">
+    <div class="ContainerFooter">
+      <div class="footer-row">
+        <div class="footer-links">
+          <h4>Nosotros</h4>
+          <ul>
+            <h5 id="TextoNostros">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est ducimus quasi tenetur repellat iste deserunt numquam dolorem minima velit, dolore atque quo magni, facilis explicabo recusandae veniam tempore dicta perspiciatis?</h5>
+          </ul>
+        </div>
+  
+          <div class="footer-links">
+              <h4>Compañia</h4>
+              <ul>
+                <li><a href="#">Nosotros</a></li>
+                <li><a href="#">Nuestros Servicios</a></li>
+                <li><a href="#">Politica de Privacidad</a></li>
+                <li><a href="#">Afiliate</a></li>
+              </ul>
+          </div>
+  
+        <div class="footer-links">
+            <h4>Ayuda</h4>
+            <ul>
+                <li><a href="#">Preguntas</a></li>
+                <li><a href="#">Compras</a></li>
+                <li><a href="#">Envios</a></li>
+                <li><a href="#">Estatus</a></li>
+                <li><a href="#">Pago</a></li>
+            </ul>
+        </div>
+  
+            <div class="footer-links">
+              <h4>Siguenos</h4>
+                <div class="social-link">
+                    <a id="nombreInstagram" href="https://web.facebook.com/acercord.v/?_rdc=1&_rdr"><i class="fa-brands fa-facebook-f"> Facebook</i>
+                    <br>
+                    <br>
+                    <a id="nombreInstagram" href="https://www.instagram.com/a.acercord_fierros.ferreteria/?hl=es"><i class="fab fa-instagram"> Instagram</i></a>
+                    
+                </div>
+            </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+
+
+</body>
+</html>

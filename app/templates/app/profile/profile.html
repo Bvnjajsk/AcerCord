@@ -1,0 +1,393 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contacto</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="{%static 'profile/style.css' %}">
+
+    
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jasny-bootstrap/4.0.0/css/jasny-bootstrap.min.css">
+
+
+  </head>
+
+<body>
+
+  
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Delicias del Maullin</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="nav navbar-nav navbar-center">
+        <li class="nav-item">
+         <li class="nav-item">
+            <a class="nav-link" href="{% url 'home'%}"> <i class="bi bi-house"></i> </i> Inicio</a>
+         </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'categoria'%}"> <i class="bi bi-book"></i> </i> Categorias</a>
+        </li>
+        <li>
+
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'contacto'%}"> <i class="bi bi-chat-dots"></i> Contacto</a>
+        </li>
+
+        
+        {% if perms.app.view_producto %}
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'listar_producto'%}"> <i class="bi bi-list-check"></i> Listar Producto</a>
+        </li>
+        {% endif %}
+
+        
+        {% if perms.app.add_producto %} 
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'agregar_producto'%}"> <i class="bi bi-plus-circle"></i> Agregar Producto</a>
+        </li>
+        {% endif %}
+
+</div>
+
+        
+    </div>
+    <div>
+        <li class="carrito">
+            <a class="nav-link" href="{% url 'carrito'%}"> <i class="bi bi-cart3">Ver Carrito</i></a>
+        </li>
+        
+    </div>
+
+
+            
+  <div >
+
+    {% if user.is_authenticated %}
+    <li class="user">
+        <a href="{% url 'profile'%}"> @{{ user.username}}</a>
+    </li>
+    <li class="logout">
+    <a href="{% url 'logout'%}">Cerrar sesion</a>
+    </li>
+
+
+    {% else %}
+    <li class="login">
+    <a href="{% url 'login'%}">Iniciar sesion</a>
+    </li>
+
+    {% endif %}
+
+
+</div>
+       
+
+  </nav>
+
+  </nav>
+
+        <!-- LOGO -->
+    <a class="logo" href="{% url 'home'%}">
+        <img src="{% static 'img/Logo_for_bakery_cake_shop.png'%}"  alt="logo">
+    </a>
+
+
+ 
+
+
+<div id="contenido">
+
+  {% block contenido%}
+
+  
+  {% endblock %}
+
+</div>
+
+    <div class="col-4 text-right pt-2">
+    </div>
+</div>
+</div>
+<div class="container-fluid">
+<div class="row">
+    <div class="container mt-5 bootstrap snippet">
+        <div class="row">
+          <div class="col-sm-3">
+                <ul class="list-group mb-4">
+                    <li class="list-group-item">Usuario:  Brunis</li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Notificaciones
+                        <span class="badge badge-primary badge-pill">10930</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Pendiente de envio
+                        <span class="badge badge-primary badge-pill">0</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Pendiente de pago
+                    </li>
+                </ul> 
+            </div><!--/col-3-->
+          <div class="col-sm-9">
+              <div class="card text-center">
+                    <div class="card-header">
+                      <ul class="nav nav-tabs nav-fill card-header-tabs" id="myTab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true"><i class="fas fa-edit"></i> Perfil de usuario</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="history-order-tab" data-toggle="tab" href="#history-order" role="tab" aria-controls="profile" aria-selected="false"><i class="fas fa-shopping-bag"></i> Historial de pedidos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="bonus-list-tab" data-toggle="tab" href="#bonus-list" role="tab" aria-controls="contact" aria-selected="false"><i class="fab fa-bootstrap"></i> Estado de Pedidos</a>
+                            </li>
+
+                            <!--<li class="nav-item">
+                                <a class="nav-link" href="#"><i class="fas fa-sign-out-alt"></i> Выход</a>
+                            </li>-->
+                        </ul>
+                    </div>
+                    <div class="tab-content card-body" id="myTabContent">
+                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                            <div class="row">
+                                <div class="col-6">
+                                    <form class="needs-validation" novalidate>
+                                        <div class="form-row">
+                                            <div class="col-md-12 mb-3">
+                                                <label for="validationTooltip01">Nombre</label>
+                                                <input type="text" class="form-control" id="validationTooltip01" placeholder="nombre" required>
+                                                <div class="valid-feedback">
+                                                    Guardado.
+                                                </div>
+                                                <div class="invalid-feedback">
+                                                    Debes ingresar un nombre.
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12 mb-3">
+                                                <label for="validationTooltip02">Apellido</label>
+                                                <input type="text" class="form-control" id="validationTooltip02" placeholder="Sat" required>
+                                                <div class="valid-feedback">
+                                                  Guardado.
+                                                </div>
+                                                <div class="invalid-feedback">
+                                                    Debes ingresar un apellido.
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12 mb-3">
+                                                <label for="validationTooltip03">E-mail</label>
+                                                <input type="email" class="form-control" id="validationTooltip03" placeholder="simple@demo.com"  required>
+                                                <div class="valid-feedback">
+                                                  Guardado.
+                                                </div>
+                                                <div class="invalid-feedback">
+                                                    Debes ingresar un correo.
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12 mb-3">
+                                                <label for="validationTooltip04">Telefono contacto</label>
+                                                <input type="number" class="form-control" id="validationTooltip04" placeholder="+569858484" required>
+                                                <div class="valid-feedback">
+                                                  Guardado.
+                                                </div>
+                                                <div class="invalid-feedback">
+                                                    Debes ingresar un número valido.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button class="btn btn-primary" type="submit">Guardar</button>
+                                    </form>
+                                </div>
+                                <div class="col-6">
+                                    <form class="needs-validation" novalidate>
+                                        <div class="form-row">
+                                            <div class="col-md-12 mb-3">
+                                                <label for="validationTooltip05">Direccion</label>
+                                                <input type="password" class="form-control" id="Las rosas 44" required>
+                                                <div class="valid-feedback">
+                                                    aaa
+                                                </div>
+                                                <div class="invalid-feedback">
+                                                   aaa
+                                                </div>
+                                            </div>
+                                        </div>
+      
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="history-order" role="tabpanel" aria-labelledby="history-order-tab">
+                            <table class="table table-sm table-hover table-bordered table-striped">
+                                <thead class="thead-light">
+                                    <tr>
+                                        <th scope="col" data-toggle="tooltip" data-placement="bottom" title="numpedido">№</th>
+                                        <th scope="col">Producto</th>
+                                        <th scope="col">Cantidad</th>
+                                        <th scope="col">Modo retiro</th>
+                                        <th scope="col">Total</th>
+                                        <th scope="col">Fecha </th>
+                                        <th scope="col"></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th class="align-middle" scope="row">#3</th>
+                                        <td class="align-middle">Pavel Sergeevich Yakymenko</td>
+                                        <td class="align-middle">1</td>
+                                        <td class="align-middle">Завершенный</td>
+                                        <td class="align-middle">550.00₴</td>
+                                        <td class="align-middle">18.07.2019</td>
+                                        <td class="align-middle"><a href="" class="btn btn-primary btn-sm"><i class="far fa-eye">Descargar boleta</i></a></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="align-middle" scope="row">#2</th>
+                                        <td class="align-middle">Pavel Sergeevich Yakymenko</td>
+                                        <td class="align-middle">1</td>
+                                        <td class="align-middle">Отменен</td>
+                                        <td class="align-middle">80.00₴</td>
+                                        <td class="align-middle">18.07.2019</td>
+                                        <td class="align-middle"><a href="" class="btn btn-primary btn-sm"><i class="far fa-eye">Descargar boleta</i></a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="tab-pane fade" id="bonus-list" role="tabpanel" aria-labelledby="bonus-list-tab">
+                            <div class="alert alert-success" role="alert">
+                                aaaa
+                            </div>
+                            <table class="table table-sm table-hover table-bordered table-striped">
+                                <caption>Para ver el detalle de seguimiento haz click en el boton ver</caption> 
+                                <thead class="thead-light">
+                                    <tr>
+                                        <th scope="col">Número</th>
+                                        <th scope="col">Fecha envio</th>
+                                        <th scope="col">Fecha recepción</th>
+                                        <th scope="col"></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">3242</th>
+                                        <td>03.08.2019</td>
+                                        <td>03.08.2019</td>
+                                        <td class="align-middle"><a href="{% url 'seguimiento'%}" class="btn btn-primary btn-sm"><i class="far fa-eye">Ver</i></a></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">7454</th>
+                                        <td>03.08.2019</td>
+                                        <td>03.08.2019</td>
+                                        <td class="align-middle"><a href="{% url 'seguimiento'%}" class="btn btn-primary btn-sm"><i class="far fa-eye">Ver</i></a></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">234</th>
+                                        <td>03.08.2019</td>
+                                        <td>03.08.2019</td>
+                                        <td class="align-middle"><a href="{% url 'seguimiento'%}" class="btn btn-primary btn-sm"><i class="far fa-eye">Ver</i></a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                       
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div><!--/col-9-->
+        </div><!--/row-->
+            </div>
+        </div> 
+    </div>     
+</div> 
+</div>                               
+
+
+
+
+<footer class="footer">
+
+  <div class="wrap-footer">
+    <div class="text-element-footer element-footer">
+      <h3 class="main-c"></h3>
+          <p>Todos los derechos de propiedad intelectual relacionados con los productos y 
+              servicios ofrecidos por la pastelería, 
+              incluyendo los diseños, marcas y logotipos, 
+              son propiedad exclusiva de la pastelería.
+              La pastelería se compromete a proteger la privacidad de los datos personales 
+              proporcionados por el cliente de acuerdo con las leyes y regulaciones aplicables.
+          </p>
+      </div>
+
+    <div class="text-element-footer element-footer">
+      <h5>Dirección</h5>
+      <ul>
+        <li>Las rosas 36</li>
+        <li>Viña del Mar</li>
+        <li>Celular: (+34) 600 00 00 </li>
+        <li>Tel. Fijo: (+34) 900 00 00 </li>
+      </ul>
+    </div>
+    <div class="text-element-footer link-elements-footer element-footer">
+
+  </div>
+    <div class="rrss-element-footer element-footer">
+      <h6>Redes Sociales</h6>
+      <ul>
+        <li>
+            <a href="https://facebook.com" target="_blank" rel="nofollow noopener noreferrer">
+                <i class="bi bi-facebook"></i>
+            </a>
+        </li>
+        <li>
+            <a href="https://instagram.com/deliciasdelmaullin" target="_blank" rel="nofollow noopener noreferrer">
+                <i class="bi bi-instagram"></i>
+            </a>
+        </li>
+        <li>
+            <a href="https://www.whatsapp.com/?lang=es" target="_blank" rel="nofollow noopener noreferrer">
+                <i class="bi bi-whatsapp"></i>
+            </a>
+        </li>
+    </ul>
+    </div>
+    </div>
+    <div class="footer-creds">
+    <div class="copy-creds">
+    <p>©2023 · Delicias del Maullin Todos los derechos reservados.</p>
+    </div>
+    <div class="legal-creds">
+    <ul>
+    <li><a href="/politica-privacidad">Política de Privacidad</a></li>
+    <li><a href="/politica-cookies">Política de Cookies</a></li>
+    <li><a href="/aviso-legal">Aviso Legal</a></li>
+    </ul>
+    </div>
+    </div>
+  </footer>
+    
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<script src="{% static 'profile/js/script.js'%}"></script>
+<!-- CDN JS  -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jasny-bootstrap/4.0.0/js/jasny-bootstrap.min.js"></script>
+<!-- Bootstrap select JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.2/js/bootstrap-select.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.5/js/i18n/defaults-ua_UA.js"></script>
+
+
+</body>
+</html>

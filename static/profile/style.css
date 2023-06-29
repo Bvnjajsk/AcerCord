@@ -1,0 +1,620 @@
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+
+  body {
+
+      background-color: #250e79;
+      background-image: url(../img/fondo5.jpg);
+      min-height: 100vh;
+      background-position: center;
+      backdrop-filter: blur(2px);
+  }
+
+  img {
+      width: 100%;
+  }
+
+
+  .logo {
+      position: relative;
+      line-height: 18px;
+      left: -8px;
+      top: -9px;
+      margin-bottom: 20px;
+      padding: 3px;
+      text-align: center;
+      z-index: 99999;
+
+  }
+
+
+  .bg-light {
+    background-color: rgb(0 0 0 / 7%)!important;
+  }
+
+  a {
+    color: rgb(193, 123, 212);
+    text-decoration: none;
+    background-color: transparent;
+  }
+  
+  /*estilo carrito */
+  .carrito{
+    list-style: none;
+    color: #000000;
+  }
+
+  .login{
+    list-style: none;
+    color: #000000;
+  }
+
+  .logout{
+    list-style: none;
+    color: #000000;
+  }
+
+  .user {
+    list-style: none;
+    color: #000000;
+    margin-left: 33px;
+  }
+
+  /*profile*/
+  /* Estilos generales */
+    .container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+
+  .row {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .col-4 {
+    width: 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .text-right {
+    text-align: left;
+  }
+
+  .pt-2 {
+    padding-top: 0;
+  }
+
+  .container-fluid {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .mt-5 {
+    margin-top: 2rem;
+  }
+
+  .bootstrap.snippet {
+    margin-bottom: 3rem;
+  }
+
+  .col-sm-3 {
+    width: 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .list-group-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .badge-pill {
+    margin-top: 0.5rem;
+  }
+
+
+
+
+
+
+  /*FOOTER*/
+  footer{
+      background-color: #fff;
+      color: var(--second-c);
+      margin-top: 207px;
+    }
+    footer ul{
+      padding:0;
+    }
+    footer li{
+      list-style: none;
+    }
+    .wrap-footer{
+      display: grid;
+      grid-template-columns: 30% 15% 15% 20%;
+      column-gap: 5%;
+      padding: 1rem;
+      margin: 2rem auto;
+      max-width: 1200px;
+    }
+    .logo-element_footer{
+      display: flex;
+      margin: 2rem 0;
+    }
+    .logo-element_footer img{
+      max-height: 75px;
+    }
+ 
+    .element-footer h5 {
+      margin: 1rem 0;
+        margin-left: 0px;
+      margin-left: 33px;
+    }
+
+        /*redes sociales*/
+        .element-footer h6{
+          position: absolute;
+          top: 1917px;
+          font-size: 1.25rem;
+          margin-left: 9px;
+        }
+        
+    
+    .text-element-footer li{
+      line-height: 2;
+    }
+
+    .text-element-footer ul{
+      line-height: 2;
+      text-align: center;
+      margin-left: -13px;
+      width: 107%;
+    }
+    
+    .link-elements-footer li a{
+      color:#FFC300;
+    }
+    .rrss-element-footer ul{
+      display: flex;
+      flex-flow: wrap;
+      margin-right: 57px;
+      margin-top: -173px;
+      left: 214px;
+      position: absolute;
+    }
+    .rrss-element-footer img{
+      width: 35px;
+    }
+    .rrss-element-footer li{
+      margin-right: 1rem;
+    }
+    .footer-creds{
+      display: flex;
+      justify-content: space-between;
+      padding: 0 1rem;
+      color: #576171;
+      font-size: .9rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .legal-creds ul{
+      display: flex;
+      flex-flow: row;
+    }
+    .legal-creds ul li{
+      padding-right: 1rem;
+    }
+    .legal-creds ul a{
+      color: #576171;
+      font-size: .9rem;
+    }
+ 
+    .wrap-footer{
+      grid-template-columns: repeat(2,1fr);
+    }
+
+
+}
+
+
+
+
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+  body {
+
+      background-color: #250e79;
+      background-image: url(../img/fondo5.jpg);
+      min-height: 100vh;
+      background-position: center;
+      backdrop-filter: blur(2px);
+  }
+
+
+  img {
+      width: 50%;
+      
+  }
+
+
+  .logo {
+      position: relative;
+      line-height: 18px;
+      left: 200px;
+      top: 0px;
+      margin-bottom: 20px;
+      padding: 3px;
+      text-align: center;
+      z-index: 99999;
+
+
+  }
+
+  
+  .bg-light {
+    background-color: rgb(0 0 0 / 7%)!important;
+  }
+
+  a {
+    color: rgb(193, 123, 212);
+    text-decoration: none;
+    background-color: transparent;
+  }
+  
+        /*estilo carrito */
+        .carrito{
+          list-style: none;
+          color: #000000;
+        }
+      
+        .login{
+          list-style: none;
+          color: #000000;
+        }
+      
+        .logout{
+          list-style: none;
+          color: #000000;
+        }
+      
+        .user{
+          list-style: none;
+          color: #000000;
+        }
+     
+
+
+  /*FOOTER*/
+    footer{
+      background-color: #fff;
+      color: var(--second-c);
+      margin-top: 93px;
+    }
+    footer ul{
+      padding:0;
+    }
+    footer li{
+      list-style: none;
+    }
+    .wrap-footer{
+      display: grid;
+      grid-template-columns: 30% 15% 15% 20%;
+      column-gap: 5%;
+      padding: 1rem;
+      margin: 2rem auto;
+      max-width: 1200px;
+    }
+    .logo-element_footer{
+      display: flex;
+      margin: 2rem 0;
+    }
+    .logo-element_footer img{
+      max-height: 75px;
+    }
+    .element-footer h5{
+      margin: 1rem 0;
+      margin-left: 85px;
+    }
+
+    .text-element-footer li{
+      line-height: 2;
+    }
+    .link-elements-footer li a{
+      color:#FFC300;
+    }
+    
+    .text-element-footer ul{
+      margin-left: 9px;
+      width: 201%;
+      text-align: center;
+      
+    }
+
+    .rrss-element-footer ul{
+      display: flex;
+      flex-flow: wrap;
+      text-align: center;
+      margin-left: 14px;
+      margin-top: 12px;
+    }
+
+    .rrss-element-footer img{
+      width: 35px;
+    }
+    .rrss-element-footer li{
+      margin-right: 1rem;
+    }
+
+    
+    .rrss-element-footer h6{
+      margin-top: 18px;
+      font-size: large;
+      
+    }
+
+    .footer-creds{
+      display: flex;
+      justify-content: space-between;
+      padding: 0 1rem;
+      color: #576171;
+      font-size: .9rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .legal-creds ul{
+      display: flex;
+      flex-flow: row;
+    }
+    .legal-creds ul li{
+      padding-right: 1rem;
+    }
+    .legal-creds ul a{
+      color: #576171;
+      font-size: .9rem;
+    }
+ 
+   
+
+
+
+}
+
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+
+  body {
+
+      background-color: #250e79;
+      background-image: url(../img/fondo5.jpg);
+      min-height: 100vh;
+      background-position: center;
+      backdrop-filter: blur(2px);
+  }
+
+
+
+  .logo {
+      width: 300px;
+      display: flex;
+      /* Establece el contenedor como un flexbox */
+      justify-content: center;
+      /* Centra el contenido horizontalmente */
+      align-items: center;
+      /* Centra el contenido vertical*/
+      position: relative;
+      left: 10px;
+      /*ajustar el valor para mover el botón a la derecha */
+      top: -50px;
+      /*ajustar el valor para mover el botón hacia abajo */
+     
+      z-index: 9999;
+  }
+  
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+  .navbar-nav.navbar-center {
+
+      
+      position: absolute;
+      left: 50%;
+      transform: translatex(-50%);
+  }
+  
+  .bg-light {
+    background-color: rgb(0 0 0 / 7%)!important;
+  }
+
+  .nav-link{
+    font-weight: 600;
+  }
+
+        /*estilo carrito */
+        .carrito{
+          list-style: none;
+          color: #000000;
+        }
+      
+        .login{
+          list-style: none;
+          color: #000000;
+        }
+      
+        .logout{
+          list-style: none;
+          color: #000000;
+        }
+      
+        .user {
+          list-style: none;
+          color: #000000;
+          margin-left: 12px;
+        }
+
+
+
+  body {
+
+      background-color: #7767b0;
+      background-image: url(../img/fondo5.jpg);
+      min-height: 100vh;
+      background-position: center;
+      backdrop-filter: blur(2px);
+      background-size: cover;
+      
+  }
+
+  img {
+      width: 100%;
+  }
+
+
+  .logo {
+      width: 20%;
+      position: relative;
+      line-height: 18px;
+      left: 650px;
+      top: 6px;
+      padding: 3px;
+      text-align: center;
+      z-index: 99999;
+  }
+
+
+/*FOOTER*/
+    footer{
+        background-color: #fff;
+        color: var(--second-c);
+        margin-top: 139px;
+      }
+
+      footer ul{
+        padding:0;
+      }
+      footer li{
+        list-style: none;
+      }
+      .wrap-footer{
+        display: grid;
+        grid-template-columns: 30% 15% 15% 20%;
+        column-gap: 5%;
+        padding: 1rem;
+        margin: 2rem auto;
+        max-width: 1200px;
+      }
+
+      .logo-element_footer{
+        display: flex;
+        margin: 2rem 0;
+      }
+      .logo-element_footer img{
+        max-height: 75px;
+      }
+
+
+      .element-footer h5{
+        margin: 1rem 0;
+        text-align: right;
+        margin-left: 171px;
+      }
+
+      .text-element-footer li{
+        line-height: 2;
+        text-align: center;
+        margin-left: 55px;
+      }
+
+      .text-element-footer ul{
+        line-height: 2;
+        text-align: center;
+        margin-left: 53px;
+        width: 152%;
+      }
+
+      .text-element-footer p{
+        width: 119%;
+        margin-top: 19px;
+      }
+  
+    
+      .link-elements-footer li a{
+        color:#FFC300;
+      }
+
+      .rrss-element-footer ul{
+        display: flex;
+        flex-flow: wrap;
+        text-align: center;
+        margin-left: -6px;
+      }
+      .rrss-element-footer img{
+        width: 35px;
+        
+      }
+
+      .rrss-element-footer h6{
+        margin-top: 19px;
+        font-size: large;
+        
+      }
+
+      .rrss-element-footer li{
+        margin-right: 1,5rem;
+        margin-right: 40px;
+
+      }
+
+      .footer-creds{
+        display: flex;
+        justify-content: space-between;
+        padding: 0 1rem;
+        color: #576171;
+        font-size: .9rem;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      .legal-creds ul{
+        display: flex;
+        flex-flow: row;
+      }
+      .legal-creds ul li{
+        padding-right: 1rem;
+      }
+      .legal-creds ul a{
+        color: #576171;
+        font-size: .9rem;
+      }
+      
+
+
+      
+      }
+
+
+    
+
+
+    
+
+
+
+
+    
+
+
+    
+
+

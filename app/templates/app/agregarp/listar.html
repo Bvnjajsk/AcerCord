@@ -1,0 +1,93 @@
+{%extends 'app/base/blistado.html'%}
+
+{% block js%}
+<title>AcerCord-Productos</title>
+<script>
+    function eliminarProducto(id){
+        Swal.fire({
+
+            "title":"¿Estas seguro?",
+            "text" : "Esta acción no se puede deshacer",
+            "icon" :"question",
+            "showCancelButton": true,
+            "cancelButtonText": "Cancelar",
+            "confirmButtonText": "Eliminar",
+            "cancelButtonColor":"red"
+            
+        })
+
+        .then(function(result){
+            if (result.isConfirmed){
+                window.location.href ="/eliminar-producto/"+id+"/"
+            }
+
+        })
+
+    }
+</script>
+
+
+{% endblock %}
+{% block contenido%}
+
+{% load crispy_forms_tags %}
+{%load humanize%}
+
+
+
+
+<div class="container" style="
+margin-top: 0px;
+">
+
+    <form action="{% url 'listar_producto' %}" method="get">
+
+    </form>
+
+<div class="row flex-wrap: wrap" >
+    {%for p in productos %}
+    <div class="col-md-3" style="
+    margin-top: 30px;
+    margin-left: 20px;
+">
+        <div class="ibox">
+            <div class="ibox-content product-box">
+
+                {% if p.imagen %}
+                <div class="product-imitation">
+                <img src="{{ p.imagen.url }}" alt="imagen_producto" width="200" height="200">    
+                </div>
+                {% endif %}
+
+
+
+                <div class="product-desc">
+                    <span class="product-price">${{p.precio | intcomma}}  </span>  <!-- SE MUESTRA PRECIO Y PUNTO PARA NUMEROS -->
+                    <small  class="text-muted">Nombre:</small>
+                    <a href="#" class="product-name"> {{p.nombre | capfirst}}</a> <!-- MUESTRA EL NOMBRE DEL PRODUCTO Y PRIMERA LETRA MAYUSCULA-->
+                    <div style="margin-right: 20px;" class="small m-t-xs">{{p.descripcion | capfirst}}</div>
+                    <div class="m-t text-righ">
+                        {% if perms.app.change_producto %}
+                        <a href="{%url 'modificar_producto' p.codigo%}" class="btn btn-info">Editar</a>
+                        {% endif %} 
+    
+                        {% if perms.app.delete_producto %}
+                        <a href="#" onclick="eliminarProducto({{p.codigo}})" class="btn btn-danger">Eliminar</a>
+                        {% endif %}
+                    </div>
+                
+                </div>
+            </div>
+        
+        </div>
+        
+    </div>
+    {% endfor %}
+</div>
+</div>
+
+
+
+
+
+{% endblock %}
