@@ -5,25 +5,25 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 1,
             nombre: 'Fierro',
             precio: 1,
-            imagen: 'https://raw.githubusercontent.com/ShurimaSands/combi/master/Info_producto/img/Torta-de-Hojarasca-ajustada-web-570x458.jpg'
+            imagen: 'https://raw.githubusercontent.com/ShurimaSands/combi/master/Info_producto/img/ierros1.jpg'
         },
         {
             id: 2,
-            nombre: 'Empolvados',
+            nombre: 'Fierros2',
             precio: 1,
-            imagen: 'https://raw.githubusercontent.com/ShurimaSands/combi/master/Info_producto/img/empolvado.JPG'
+            imagen: 'https://raw.githubusercontent.com/ShurimaSands/combi/master/Info_producto/img/ierros2.JPG'
         },
         {
             id: 3,
-            nombre: 'Galletas',
+            nombre: 'Fierros3',
             precio: 1,
-            imagen: 'https://raw.githubusercontent.com/ShurimaSands/combi/master/Info_producto/img/photo.jpg'
+            imagen: 'https://raw.githubusercontent.com/ShurimaSands/combi/master/Info_producto/img/ierros3.jpg'
         },
         {
             id: 4,
-            nombre: 'Cachitos',
+            nombre: 'Fierros4',
             precio: 1,
-            imagen: 'https://raw.githubusercontent.com/ShurimaSands/combi/master/Info_producto/img/Cachitos-con-manjar02.jpg'
+            imagen: 'https://raw.githubusercontent.com/ShurimaSands/combi/master/Info_producto/img/fierros4.jpg'
         }
 
     ];
