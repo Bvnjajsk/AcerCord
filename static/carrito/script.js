@@ -4,6 +4,7 @@ const baseDeDatos = [
         {
             id: 1,
             nombre: 'Fierro',
+<<<<<<< HEAD
             precio: 10000,
             imagen: ''
         },
@@ -24,6 +25,28 @@ const baseDeDatos = [
             nombre: 'Fierro4',
             precio: 1000,
             imagen: ''
+=======
+            precio: 1,
+            imagen: 'https://raw.githubusercontent.com/ShurimaSands/combi/master/Info_producto/img/ierros1.jpg'
+        },
+        {
+            id: 2,
+            nombre: 'Fierros2',
+            precio: 1,
+            imagen: 'https://raw.githubusercontent.com/ShurimaSands/combi/master/Info_producto/img/ierros2.JPG'
+        },
+        {
+            id: 3,
+            nombre: 'Fierros3',
+            precio: 1,
+            imagen: 'https://raw.githubusercontent.com/ShurimaSands/combi/master/Info_producto/img/ierros3.jpg'
+        },
+        {
+            id: 4,
+            nombre: 'Fierros4',
+            precio: 1,
+            imagen: 'https://raw.githubusercontent.com/ShurimaSands/combi/master/Info_producto/img/fierros4.jpg'
+>>>>>>> aa74e8acb3eab034d1c8afd798d631141b428b10
         }
 
     ];
