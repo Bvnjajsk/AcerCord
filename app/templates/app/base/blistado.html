@@ -24,22 +24,29 @@
   <nav>
     <div class="topnav fixed-top" id="myTopnav">
       <a href="{% url 'home' %}" class="active" ><i class="fa fa-fw fa-home"></i>Inicio</a>
+      <a href="{% url 'buscar'%}"><i class="fa-solid fa-magnifying-glass"></i> Buscar</a>
       {% if user.is_authenticated %}
-      <a href="{% url 'home' %}"><i class="fa fa-fw fa-user"></i>{{ user.username}}</a>
+      <a href="{% url 'listar_producto'%}" id="NavBar"><i class="fa-regular  fa-rectangle-list fa-sm"></i> Lista Productos</a>
+      {% endif %}
+      {% if perms.app.add_producto %} 
+      <a href="{% url 'agregar_producto'%}"><i class="fa-sharp fa-solid fa-plus"></i> Agregar Productos</a>
+      {% endif %}
+      <a href="{% url 'contacto'%}"><i class="fa fa-fw fa-envelope"></i> Contacto</a>
+      {% if user.is_authenticated %}
+      <a href="{% url 'home'%}"><i class="fa fa-fw fa-user"></i>{{ user.username}}</a>
       {% else %}
       <a href="{% url 'login'%}"><i class="fa fa-fw fa-user"></i>Iniciar sesion</a>
       {% endif %}
-
-
-      <a href="{% url 'listar_producto'%}" id="NavBar"><i class="fa-regular  fa-rectangle-list fa-sm"></i> Productos</a>
-
-      {% if perms.app.add_producto %} 
-      <a href="{% url 'agregar_producto'%}"><i class="fa fa-fw fa-user"></i>Agregar Productos</a>
-      {% endif %}
-      <a href="{% url 'contacto'%}"><i class="fa fa-fw fa-envelope"></i> Contacto</a>
+      {% if user.is_authenticated %}
       <a href="{% url 'logout'%}"><i class=""></i>Cerrar sesion</a>
+      {% endif %}
+      {% if user.is_authenticated %}
+      <a href="{% url 'carrito'%}"><i class="fa-solid fa-cart-shopping"></i> Carrito</a>
+      {% endif %}
 
       
+
+      <!--<a href="#"><i id="CarritoCompra" class="fa-solid fa-cart-shopping"></i> Carrito</a>     Aun por terminar  -->
       <a href="javascript:void(0);" class="icon" onclick="myFunction()">
       <i class="fa fa-bars"></i>
       </a>

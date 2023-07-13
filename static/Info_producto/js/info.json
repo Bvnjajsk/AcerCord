@@ -1,30 +1,30 @@
-{
-    "categories":[
-       {
-          "idCategory":"1",
-          "strCategory":"Torta Hojarasca",
-          "strCategoryThumb":"https://raw.githubusercontent.com/ShurimaSands/combi/master/Info_producto/img/Torta-de-Hojarasca-ajustada-web-570x458.jpg",
-          "strCategoryDescription":"La hojarasca es un tipo de masa que se utiliza mucho en Chile para hacer tartas y alfajores. La mayoría de las veces se rellena con manjar y es muy popular. "
-       },
-       {
-          "idCategory":"2",
-          "strCategory":"Empolvados",
-          "strCategoryThumb":"https://raw.githubusercontent.com/ShurimaSands/combi/master/Info_producto/img/empolvado.JPG",
-          "strCategoryDescription":"El empolvado es un dulce típico chileno elaborado con harina y relleno de manjar. Su nombre se debe a que están espolvoreados con azúcar flor. Su elaboración no tiene mayor dificultad y no lleva más de veinte minutos para una pequeña cantidad."
-       },
-       {
-          "idCategory":"3",
-          "strCategory":"Galletas",
-          "strCategoryThumb":"https://raw.githubusercontent.com/ShurimaSands/combi/master/Info_producto/img/photo.jpg",
-          "strCategoryDescription":"Pasta dulce o salada hecha con una masa de harina, manteca, huevos y otros ingredientes, que se cuece al horno hasta que resulta crujiente; hay una gran variedad de sabores, formas y tamaños, aunque las más corrientes son las dulces, redondas y de poco grosor."
-       },
-       {
-          "idCategory":"4",
-          "strCategory":"Cachitos",
-          "strCategoryThumb":"https://raw.githubusercontent.com/ShurimaSands/combi/master/Info_producto/img/Cachitos-con-manjar02.jpg",
-          "strCategoryDescription":"un dulce chileno que siempre comprábamos cuando yo era pequeña en Valparaíso en la panadería La Guria. Bueno este era uno de tantos dulces chilenos que tenían para vender, pero para quienes amamos el manjar este siempre era una buenísima opción."
-       }
- 
- 
-    ]
- }
+   {
+      "categories":[
+         {
+            "idCategory":"1",
+            "strCategory":"Fierro1",
+            "strCategoryThumb":"https://raw.githubusercontent.com/ShurimaSands/combi/master/Info_producto/img/Torta-de-Hojarasca-ajustada-web-570x458.jpg",
+            "strCategoryDescription":"La hojarasca es un tipo de masa que se utiliza mucho en Chile para hacer tartas y alfajores. La mayoría de las veces se rellena con manjar y es muy popular. "
+         },
+         {
+            "idCategory":"2",
+            "strCategory":"Fierro2",
+            "strCategoryThumb":"https://raw.githubusercontent.com/ShurimaSands/combi/master/Info_producto/img/empolvado.JPG",
+            "strCategoryDescription":"El empolvado es un dulce típico chileno elaborado con harina y relleno de manjar. Su nombre se debe a que están espolvoreados con azúcar flor. Su elaboración no tiene mayor dificultad y no lleva más de veinte minutos para una pequeña cantidad."
+         },
+         {
+            "idCategory":"3",
+            "strCategory":"Fierro3",
+            "strCategoryThumb":"https://raw.githubusercontent.com/ShurimaSands/combi/master/Info_producto/img/photo.jpg",
+            "strCategoryDescription":"Pasta dulce o salada hecha con una masa de harina, manteca, huevos y otros ingredientes, que se cuece al horno hasta que resulta crujiente; hay una gran variedad de sabores, formas y tamaños, aunque las más corrientes son las dulces, redondas y de poco grosor."
+         },
+         {
+            "idCategory":"4",
+            "strCategory":"Fierro4",
+            "strCategoryThumb":"https://raw.githubusercontent.com/ShurimaSands/combi/master/Info_producto/img/Cachitos-con-manjar02.jpg",
+            "strCategoryDescription":"un dulce chileno que siempre comprábamos cuando yo era pequeña en Valparaíso en la panadería La Guria. Bueno este era uno de tantos dulces chilenos que tenían para vender, pero para quienes amamos el manjar este siempre era una buenísima opción."
+         }
+   
+   
+      ]
+   }

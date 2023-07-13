@@ -1,0 +1,217 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delicias del Maullin</title>
+
+    <!--navbar-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/72133ec4d8.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/a608bc6fd0.js" crossorigin="anonymous"></script>
+    <!-- CSS File -->
+    <link rel="stylesheet" href="{% static 'agregar/style.css'%}">
+
+    
+</head>
+
+<body>
+
+    <nav>
+        <div class="topnav fixed-top" id="myTopnav">
+          <a href="{% url 'home' %}" class="active" ><i class="fa fa-fw fa-home"></i>Inicio</a>
+          <a href="{% url 'buscar'%}"><i class="fa-solid fa-magnifying-glass"></i> Buscar</a>
+          {% if user.is_authenticated %}
+          <a href="{% url 'listar_producto'%}" id="NavBar"><i class="fa-regular  fa-rectangle-list fa-sm"></i> Lista Productos</a>
+          {% endif %}
+          {% if perms.app.add_producto %} 
+          <a href="{% url 'agregar_producto'%}"><i class="fa-sharp fa-solid fa-plus"></i> Agregar Productos</a>
+          {% endif %}
+          <a href="{% url 'contacto'%}"><i class="fa fa-fw fa-envelope"></i> Contacto</a>
+          {% if user.is_authenticated %}
+          <a href="{% url 'home'%}"><i class="fa fa-fw fa-user"></i>{{ user.username}}</a>
+          {% else %}
+          <a href="{% url 'login'%}"><i class="fa fa-fw fa-user"></i>Iniciar sesion</a>
+          {% endif %}
+          {% if user.is_authenticated %}
+          <a href="{% url 'logout'%}"><i class=""></i>Cerrar sesion</a>
+          {% endif %}
+          {% if user.is_authenticated %}
+          <a href="{% url 'carrito'%}"><i class="fa-solid fa-cart-shopping"></i> Carrito</a>
+          {% endif %}
+    
+          
+    
+          <!--<a href="#"><i id="CarritoCompra" class="fa-solid fa-cart-shopping"></i> Carrito</a>     Aun por terminar  -->
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+          </a>
+        </div>
+      </nav>
+            <h1>Selecciona tu metodo de pago:</h1>
+            </aside> <!-- col.// -->
+            <aside class="col-sm-6">
+
+        
+        <article class="card">
+        <div class="card-body p-5">
+        
+        <ul class="nav bg-light nav-pills rounded nav-fill mb-3" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" data-toggle="pill" href="#nav-tab-card">
+                <i class="fa fa-credit-card"></i> Tarjeta de credito</a></li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="pill" href="#nav-tab-paypal">
+                <i class="fab fa-paypal"></i>  Paypal</a></li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="pill" href="#nav-tab-bank">
+                <i class="fa fa-university"></i>  Transferencia Bancaria</a></li>
+        </ul>
+        
+        <div class="tab-content">
+        <div class="tab-pane fade show active" id="nav-tab-card">
+            <form role="form">
+            <div class="form-group">
+                <label for="username">Nombre completo (en tarjeta)</label>
+                <input type="text" class="form-control" name="username" placeholder="" required="">
+            </div> <!-- form-group.// -->
+        
+            <div class="form-group">
+                <label for="cardNumber">Numero tarjeta</label>
+                <div class="input-group">
+                    <input type="text" class="form-control" name="cardNumber" placeholder="">
+                    <div class="input-group-append">
+                        <span class="input-group-text text-muted">
+                            <i class="fab fa-cc-visa"></i>   <i class="fab fa-cc-amex"></i>   
+                            <i class="fab fa-cc-mastercard"></i> 
+                        </span>
+                    </div>
+                </div>
+            </div> <!-- form-group.// -->
+        
+            <div class="row">
+                <div class="col-sm-8">
+                    <div class="form-group">
+                        <label><span class="hidden-xs">Expiracion</span> </label>
+                        <div class="input-group">
+                            <input type="number" class="form-control" placeholder="MM" name="">
+                            <input type="number" class="form-control" placeholder="YY" name="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label data-toggle="tooltip" title="" data-original-title="3 digits code on back side of the card">CVV <i class="fa fa-question-circle"></i></label>
+                        <input type="number" class="form-control" required="">
+                    </div> <!-- form-group.// -->
+                </div>
+            </div> <!-- row.// -->
+            <button class="subscribe btn btn-primary btn-block" type="button"> Confirmar  </button>
+            </form>
+        </div> <!-- tab-pane.// -->
+        <div class="tab-pane fade" id="nav-tab-paypal">
+        <p>Paypal es mucho mas sencillo!</p>
+        <p>
+        <a href="https://www.paypal.com/signin"><button type="button" class="btn btn-primary"> <i class="fab fa-paypal"></i> Iniciar sesión Paypal </button></a>
+        </p>
+        <p><strong>Note:</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. </p>
+        </div>
+        <div class="tab-pane fade" id="nav-tab-bank">
+        <p>Detalles de cuenta Bancaria</p>
+        <dl class="param">
+            <dt>BANCO: </dt>
+            <dd> Banco Estado</dd>
+            </dl>
+            <dl class="param">
+            <dt>Número de cuenta: </dt>
+            <dd> 9929391992</dd>
+            </dl>
+            <dl class="param">
+            <dt>RUT: </dt>
+            <dd> 208277715</dd>
+        </dl>
+        <p><strong>Nota:</strong> Recuerda ingresar bien los DATOS </p>
+        </div> <!-- tab-pane.// -->
+        </div> <!-- tab-content .// -->
+        
+        </div> <!-- card-body.// -->
+        </article> <!-- card.// -->
+        
+        
+            </aside> <!-- col.// -->
+        </div> <!-- row.// -->
+        
+        </div> 
+        <!--container end.//-->
+        
+        <br><br>
+
+    
+    <!-- footer -->
+    <footer class="footer">
+        <div class="ContainerFooter">
+            <div class="footer-row">
+                <div class="footer-links">
+                <h4>Nosotros</h4>
+                <ul>
+                    <h5 id="TextoNostros">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est ducimus quasi tenetur repellat iste deserunt numquam dolorem minima velit, dolore atque quo magni, facilis explicabo recusandae veniam tempore dicta perspiciatis?</h5>
+                </ul>
+                </div>
+        
+                <div class="footer-links">
+                    <h4>Compañia</h4>
+                    <ul>
+                    <li><a href="#">Nosotros</a></li>
+                    <li><a href="#">Nuestros Servicios</a></li>
+                    <li><a href="#">Politica de Privacidad</a></li>
+                    <li><a href="#">Afiliate</a></li>
+                    </ul>
+                </div>
+        
+            <div class="footer-links">
+                <h4>Ayuda</h4>
+                <ul>
+                    <li><a href="#">Preguntas</a></li>
+                    <li><a href="#">Compras</a></li>
+                    <li><a href="#">Envios</a></li>
+                    <li><a href="#">Estatus</a></li>
+                    <li><a href="#">Pago</a></li>
+                </ul>
+                </div>
+        
+                    <div class="footer-links">
+                    <h4>Siguenos</h4>
+                    <div class="social-link">
+                        <a id="nombreInstagram" href="https://web.facebook.com/acercord.v/?_rdc=1&_rdr"><i class="fa-brands fa-facebook-f"> Facebook</i>
+                        <br>
+                        <br>
+                        <a id="nombreInstagram" href="https://www.instagram.com/a.acercord_fierros.ferreteria/?hl=es"><i class="fab fa-instagram"> Instagram</i></a>
+                        
+                    </div>
+                    </div>
+            </div>
+            </div>
+        </footer>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <!-- catalogo -->
+
+</body>
+
+</html>

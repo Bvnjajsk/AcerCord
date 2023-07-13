@@ -1,29 +1,29 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Variables
-  const baseDeDatos = [
+const baseDeDatos = [
         {
             id: 1,
             nombre: 'Fierro',
-            precio: 1,
-            imagen: 'https://raw.githubusercontent.com/ShurimaSands/combi/master/Info_producto/img/Torta-de-Hojarasca-ajustada-web-570x458.jpg'
+            precio: 10000,
+            imagen: ''
         },
         {
             id: 2,
-            nombre: 'Empolvados',
-            precio: 1,
-            imagen: 'https://raw.githubusercontent.com/ShurimaSands/combi/master/Info_producto/img/empolvado.JPG'
+            nombre: 'Fierro2',
+            precio: 12000,
+            imagen: ''
         },
         {
             id: 3,
-            nombre: 'Galletas',
-            precio: 1,
-            imagen: 'https://raw.githubusercontent.com/ShurimaSands/combi/master/Info_producto/img/photo.jpg'
+            nombre: 'Fierro3',
+            precio: 22000,
+            imagen: ''
         },
         {
             id: 4,
-            nombre: 'Cachitos',
-            precio: 1,
-            imagen: 'https://raw.githubusercontent.com/ShurimaSands/combi/master/Info_producto/img/Cachitos-con-manjar02.jpg'
+            nombre: 'Fierro4',
+            precio: 1000,
+            imagen: ''
         }
 
     ];

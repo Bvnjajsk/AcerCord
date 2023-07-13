@@ -11,6 +11,7 @@ urlpatterns = [
     path('categoria/',categoria, name ="categoria" ),
     path('info_producto/',info_producto, name ="info_producto" ),
     path('login/',login, name ="login" ),
+    path('pago/',pago, name ="pago" ),
     path('registrar/',registrar, name ="registrar" ),
     path('contacto/',contacto, name ="contacto" ),
     path('profile/',profile, name ="profile" ),

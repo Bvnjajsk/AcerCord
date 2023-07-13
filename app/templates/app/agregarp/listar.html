@@ -35,7 +35,6 @@
 
 
 
-
 <div class="container" style="
 margin-top: 0px;
 ">
@@ -44,17 +43,14 @@ margin-top: 0px;
 
     </form>
 
-<div class="row flex-wrap: wrap" >
+<div class="row flex-wrap: wrap">
     {%for p in productos %}
-    <div class="col-md-3" style="
-    margin-top: 30px;
-    margin-left: 20px;
-">
+    <div class="col-md-3" style="margin-top: 20px; margin-left: 10px;" >
         <div class="ibox">
-            <div class="ibox-content product-box">
+            <div class="ibox-content product-box" >
 
                 {% if p.imagen %}
-                <div class="product-imitation">
+                <div class="product-imitation" >
                 <img src="{{ p.imagen.url }}" alt="imagen_producto" width="200" height="200">    
                 </div>
                 {% endif %}

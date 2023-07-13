@@ -1,7 +1,6 @@
 body {
 
   background-color: blue;
-  background-image: url('../img/fondo5.jpg');
   min-height: 100vh;
   background-position: center;
   backdrop-filter: blur(2px);

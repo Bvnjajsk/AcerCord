@@ -6,20 +6,16 @@
 {% block contenido%}
 
 {% load crispy_forms_tags %}
-
-<div style="margin-top: 150px;">
-
-
-    
-
-
+<div>
         <div class="row">
+            
             <div class="col-12 col-md-6 offset-md-3" >
+                
                 <div class="card">
                     <div class="card-body">
-                        <h2>Agregar Nuevo Productos</h2>
-                        <hr>
-            <form action="" method="post" enctype="multipart/form-data">
+                        <h2 class="NombreAgregar" style="width: 900px; color: white; background-color: #333; margin-top: 60px;">Agregar Nuevo Productos</h2>
+                        <br>
+            <form style="color: black; margin-right: 50px;" action="" method="post" enctype="multipart/form-data">
 
                 {% csrf_token%}
 

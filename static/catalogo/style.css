@@ -1,0 +1,863 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins',sans-serif;
+}
+
+
+
+/*Inicio de sesion: Fondo de inicio de sesion*/
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+}
+header{
+    top: 0px
+}
+
+
+
+/*Inicio de sesion */
+.form-box{
+    position: relative;
+    width: 400px;
+    height: 450px;
+    background: #222;
+    border: 2px solid rgba(255,255,255,0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.Color_letras_Ingresar{
+    color: white;
+}
+
+
+.inputbox{
+    position: relative;
+    margin: 30px 0;
+    width: 310px;
+    border-bottom: 2px solid white;
+    
+}
+
+.inputbox label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 1em;
+    pointer-events: none;
+    transition: .5s;
+}
+
+input:focus ~ label,
+input:valid ~ label{
+top: -10px;
+}
+
+.inputbox input {
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    padding:0 35px 0 5px;
+    color: white ;
+}
+#No_tienes_cuenta{
+    padding-left: 20%;
+}
+#Registrate{
+    padding-left: 17%;
+    color: white;
+}
+.inputbox ion-icon{
+    position: absolute;
+    right: 8px;
+    color: black;
+    font-size: 1.2em;
+    top: 20px;
+}
+.forget{
+    margin: -15px 0 15px ;
+    font-size: .9em;
+    color: black;
+    display: flex;
+    justify-content: space-between;  
+}
+#h3Formulario{
+    font-size: 40px;
+}
+
+.forget label input{
+    margin-right: 3px;
+    margin-bottom: 10px;
+}
+.forget label a{
+    color: white;
+    text-decoration: none;
+}
+.forget label a:hover{
+    text-decoration: underline;
+}
+button{
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    background: green;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+}
+.register{
+    font-size: .9em;
+    color: black;
+    text-align: center;
+    margin: 25px 0 10px;
+}
+.register p a{
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+}
+.register p a:hover{
+    text-decoration: underline;
+}
+
+/*--- Contacto ---*/
+input[type=text], select, textarea {
+width: 100%;
+padding: 5px;
+border: 4px solid #ccc;
+border-radius: 4px;
+box-sizing: border-box;
+margin-top: 6px;
+margin-bottom: 16px;
+resize: vertical;
+}
+.guardarBoton{
+    color: white;
+}
+/*Inicio (Carrucel)*/
+.container {
+border-radius: 5px;
+background-color: #f2f2f2;
+padding: 0px;
+padding-top: 0px;
+margin-top: 40px;
+}
+.LetrasIncioCarrusel{
+    text-align: center;
+    font-size: 50px;
+}
+.carousel-inner.hover img{
+    width: 100%;
+    padding-left: 0px;
+    margin-left: 0px;
+    
+}
+/*---------------------*/
+
+
+/* Inicio (Productos) */
+
+.page-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:  space-evenly;
+}
+
+.product-container {
+    margin: 15px;
+    padding: 16px 16px;
+    position: relative;
+}
+
+.product-container:hover {
+    box-shadow: 0px 8px 16px 0 rgba(0, 0, 0, 0.4);
+}
+
+.product-container img {
+    width: 300px;
+    transition: 0.5s;
+    object-fit: cover;
+}
+.product-container img:hover {
+    transform: scale(1.05) ;
+    transition: 1.2;
+}
+.product-container h2 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+.product-container h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.button-add {
+    border: none;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 8px;
+    background-color: white;
+    color: black;
+    border: 2px solid #4caf50;
+    transition-duration: 0.4s ;
+}
+.button-add:hover {
+    background-color: #4caf50;
+    color: white;
+}
+
+/*---------------------*/
+
+/*Titulo Producto*/
+
+.Titulo-Productos {
+    background-color: #333;
+    color: white;
+    text-align: center;
+}
+
+/*Contenido del Footer (Parte de abajo)*/
+.ContainerFooter{
+    max-width: 200px 500px;
+    margin: 0 auto;
+}
+.footer{
+    background-color: black;
+    padding: 80px 0;
+    margin-top: 50px;
+}
+.footer-row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.footer-links{
+    width: 25%;
+    padding: 0 20px;
+}
+.footer-links h4{
+    font-size: 20px;
+    color: white;
+    margin-bottom: 25px;
+    font-weight: 500;
+    border-bottom:  3px solid red;
+    padding-bottom: 10px;
+    display: inline-block;
+}
+#TextoNostros{
+    color: #ccc;
+}
+
+.footer-links ul li a{
+    font-size: 18px;
+    text-decoration: none;
+    color: white;
+    display: block;
+    margin-bottom: 15px;
+    transition: all .3s ease;
+}
+.footer-links ul li a:hover{
+color: white;
+padding-left: 6px;
+}
+.social-links a{
+    display: inline-block;
+    min-height: 40px;
+    width: 40px;
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: white;
+    transition: all .5s ease;
+    
+}
+.social-links a:hover{
+    background-color: #00c3ff;
+}
+@media(max-width:991px){
+    .footer-row{
+        text-align: center;
+    }
+    .footer-links{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
+
+#nombreInstagram{
+    font-family:'Font Awesome 6 Brands' ;
+    text-align: center;
+    color: white;
+}
+
+/*---------------------*/
+
+
+/* Registro Usuarios */
+
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	background: #E5E5E5;
+}
+
+main {
+	max-width: 800px;
+	width: 90%;
+	margin: auto;
+	padding: 40px;
+}
+
+.formulario {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 20px;
+}
+
+.formulario__label {
+	display: block;
+	font-weight: 700;
+	padding: 10px;
+	cursor: pointer;
+    color: white;
+}
+
+.formulario__grupo-input {
+	position: relative;
+}
+
+.formulario__input {
+	width: 100%;
+	background: #fff;
+	border: 3px solid transparent;
+	border-radius: 3px;
+	height: 45px;
+	line-height: 45px;
+	padding: 0 40px 0 10px;
+	transition: .3s ease all;
+}
+
+.formulario__input:focus {
+	border: 3px solid #0075FF;
+	outline: none;
+	box-shadow: 3px 0px 30px rgba(163,163,163, 0.4);
+}
+
+.formulario__input-error {
+	font-size: 13px;
+	margin-bottom: 0;
+	display: none;
+    color: red;
+}
+
+.formulario__input-error-activo {
+	display: block;
+}
+
+.formulario__validacion-estado {
+	position: absolute;
+	right: 15px;
+    top: 20px;
+	z-index: 100;
+	font-size: 16px;
+	opacity: 0;
+}
+
+
+
+.formulario__checkbox {
+	margin-right: 10px;
+}
+
+.formulario__grupo-terminos, 
+.formulario__mensaje,
+.formulario__grupo-btn-enviar {
+	grid-column: span 2;
+}
+
+.formulario__mensaje {
+	height: 45px;
+	line-height: 45px;
+	background: #F66060;
+	padding: 0 15px;
+	border-radius: 3px;
+	display: none;
+    color: white;
+
+}
+
+.formulario__mensaje-activo {
+	display: block;
+}
+
+.formulario__mensaje p {
+	margin: 0;
+}
+
+.formulario__grupo-btn-enviar {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.formulario__btn {
+	height: 45px;
+	line-height: 45px;
+	width: 30%;
+	background: green;
+	color: #fff;
+	font-weight: bold;
+	border: none;
+	border-radius: 3px;
+	cursor: pointer;
+	transition: .1s ease all;
+}
+
+.formulario__btn:hover {
+	box-shadow: 3px 0px 30px rgba(163,163,163, 1);
+}
+
+.formulario__mensaje-exito {
+    margin-top: 15px;
+	font-size: 20px;
+	color: #119200;
+	display: none;
+}
+
+.formulario__mensaje-exito-activo {
+	display: block;
+}
+
+/* ----- -----  Estilos para Validacion ----- ----- */
+.formulario__grupo-correcto .formulario__validacion-estado {
+	color: #1ed12d;
+	opacity: 1;
+    
+}
+
+.formulario__grupo-incorrecto .formulario__label {
+	color: #bb2929;
+}
+
+.formulario__grupo-incorrecto .formulario__validacion-estado {
+	color: #bb2929;
+	opacity: 1;
+}
+
+.formulario__grupo-incorrecto .formulario__input {
+	border: 3px solid #bb2929;
+}
+.position_registro{
+    padding-top: 10px;
+    margin-top: 50px;
+    background-color:#222 ;
+    border-radius: 20px;
+    padding-bottom: 20px;
+}
+
+
+/* ----- -----  Mediaqueries ----- ----- */
+@media screen and (max-width: 800px) {
+	.formulario {
+		grid-template-columns: 1fr;
+	}
+
+	.formulario__grupo-terminos, 
+	.formulario__mensaje,
+	.formulario__grupo-btn-enviar {
+		grid-column: 1;
+	}
+
+	.formulario__btn {
+		width: 100%;
+	}
+}
+
+.grupo_termino_condicion {
+    text-decoration: none;
+    color: white;
+    padding-left: 5px;
+}
+label.error{
+    color: red;
+}
+input.error,select,textarea{
+    border: 3px solid red;
+}
+
+/*Contacto*/
+
+.contenidoContacto{
+    max-width: 800px;
+    margin: auto;
+    padding-top: 25px;
+    background-color: #222;
+    border-radius: 14px;
+    margin-top: 30px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 30px;
+}
+.Color_letra_Contacto{
+    color: white;
+}
+#mensaje{
+    height: 100px;
+}
+
+.limpiarBoton{
+    height: 45px;
+	width: 50%;
+	background: white;
+	border-radius: 20px;
+	cursor: pointer;
+	transition: .1s ease all;
+    margin-top:20px;
+    margin-left: 25%;
+    
+}
+.guardarBoton{
+    height: 45px;
+    margin-top: 10px;
+    position: relative;
+	width: 50%;
+	background: green;
+	border-radius: 20px;
+	cursor: pointer;
+	transition: .1s ease all;
+    margin-left: 25%;
+
+
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.topnav a.active {
+    background-color: red;
+    color: white;
+}
+
+.topnav .icon {
+    display: none;
+}
+
+/*Responsive */
+@media screen and (max-width: 600px) {
+    .topnav a:not(:first-child) {display: none;}
+    .topnav a.icon {
+    float: right;
+    display: block;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .topnav.responsive {position: relative;}
+    .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    }
+    .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+    }
+}
+
+@media(min-width: 1300px){
+    .container-items{
+        display:  grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+}
+@media (max-width: 1280px){
+
+    .contenidoContacto {
+        background-color: pink;
+        padding-left: 30px;
+        padding-top: 10px;
+        padding-bottom: 8px;
+        padding-right: 30px;
+        margin-top: 10px;
+        margin-bottom: 5px;
+
+    }
+    #mensaje{
+        height: 60px;
+    }
+    .Login-Inicio{
+        margin-top: 80px;
+    }
+    .form-box{
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    .inputbox{
+        padding-right: 5px;
+        width: 350px;
+    }
+    .Login-Inicio {
+        margin-top: 40px;
+    }
+    #Registrate{
+        padding-left: 45px;
+    }
+    #No_tienes_cuenta{
+        padding-left: 90px;
+    }
+}
+
+@media (max-width: 1024px){
+
+    .contenidoContacto {
+        background-color: orange;
+        padding-left: 30px;
+        padding-top: 10px;
+        padding-bottom: 8px;
+        padding-right: 30px;
+        margin-top: 10px;
+        margin-bottom: 5px;
+
+    }
+    #mensaje{
+        height: 60px;
+    }
+    .Login-Inicio{
+        margin-top: 80px;
+    }
+    .form-box{
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    .inputbox{
+        padding-right: 5px;
+        width: 350px;
+    }
+    .Login-Inicio {
+        margin-top: 40px;
+    }
+}
+@media (max-width: 820px){
+
+    .contenidoContacto {
+        background-color: black;
+        padding-left: 30px;
+        padding-right: 30px;
+        margin-left: 30px;
+        margin-right: 30px;
+
+    }
+    #mensaje{
+        height: 100px;
+    }
+    .Login-Inicio{
+        margin-top: 80px;
+    }
+    .form-box{
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    .inputbox{
+        padding-right: 5px;
+        width: 350px;
+    }
+    #Registrate{
+        padding-left: 45px;
+    }
+    #No_tienes_cuenta{
+        padding-left: 90px;
+    }
+}
+
+@media (max-width: 768px){
+
+    .contenidoContacto {
+        background-color: #1ed12d;
+        padding-left: 30px;
+        padding-right: 30px;
+        margin-left: 30px;
+        margin-right: 30px;
+
+    }
+    #mensaje{
+        height: 100px;
+    }
+    .Login-Inicio{
+        margin-top: 80px;
+    }
+    .form-box{
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    .inputbox{
+        padding-right: 5px;
+        width: 350px;
+    }
+    #Registrate{
+        padding-left: 45px;
+    }
+    #No_tienes_cuenta{
+        padding-left: 90px;
+    }
+}
+
+@media (max-width: 420px){
+
+    .contenidoContacto {
+        background-color: #0075FF;
+        padding-left: 30px;
+        padding-right: 30px;
+        margin-left: 30px;
+        margin-right: 30px;
+
+    }
+    #mensaje{
+        height: 60px;
+    }
+    .Login-Inicio{
+        margin-top: 80px;
+    }
+    .form-box{
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    .inputbox{
+        padding-right: 5px;
+        width: 280px;
+    }
+    #Registrate{
+        padding-left: 40px;
+    }
+    #No_tienes_cuenta{
+        padding-left: 50px;
+    }
+}
+
+
+@media (max-width: 380px){
+    .LetrasIncioCarrusel{
+        font-size: 30px;
+    }
+    .Titulo-Productos{
+        font-size: 18px;
+    }
+    .contenidoContacto {
+        background-color: red;
+        padding-left: 30px; 
+        padding-right: 30px;
+        margin-left: 30px;
+        margin-right: 30px;
+        padding-bottom: 15px;
+    }
+    .Login-Inicio{
+        margin-top: 80px;
+    }
+    .form-box{
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    .inputbox{
+        padding-right: 5px;
+        width: 250px;
+    }
+}
+
+@media (max-width: 280px){
+    .LetrasIncioCarrusel{
+        font-size: 30px;
+    }
+    .Titulo-Productos{
+        font-size: 18px;
+    }
+    .contenidoContacto {
+        padding-left: 30px;
+        padding-right: 30px;
+        margin-top: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+    }
+    .Color_letra_Contacto{
+        font-size: 10px;
+
+    }
+    .guardarBoton{
+        height: 30px;
+    }
+    .limpiarBoton{
+        height: 30px;
+    }
+    .Login-Inicio{
+        margin-top: 80px;
+    }
+    .form-box{
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+    .inputbox{
+        padding-right: 10px;
+        width: 180px;
+    }
+    #Registrate{
+        padding-left: 40px;
+    }
+    #No_tienes_cuenta{
+        padding-left: 20px;
+    }
+}
+
+
+
+
+
+
+
